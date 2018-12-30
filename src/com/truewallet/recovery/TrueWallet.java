@@ -60,7 +60,7 @@ public class TrueWallet implements CommandExecutor {
 								  public void run() {
 									  try {
 									    String token = WalletAPI.GetToken(Main.getPlugin().getConfig().getString("Email"), Main.getPlugin().getConfig().getString("Password"));
-										String trans = WalletAPI.GetTransaction(token, Date.dateMod(-365), Date.dateMod(1), 20);
+										String trans = WalletAPI.GetTransaction(token, Date.dateMod(-365), Date.dateMod(1), 50);
 								    	JSONArray activities = new JSONObject(trans).getJSONObject("data").getJSONArray("activities");
 										for (int i = 0 ; i < activities.length(); i++) {
 									        JSONObject obj = activities.getJSONObject(i);
