@@ -17,8 +17,7 @@ public class Main extends JavaPlugin {
 	public static Main Plugin;
 	public static String authors = "§fSpringCraft§e, §fEditCraft§e, §fDemza";
 	private FileConfiguration customConfig;
-	public static String IP = "10.148.0.2";
-    public static int ServerVersion = 0;
+        public static int ServerVersion = 0;
 
 	@Override
 	public void onEnable() {
@@ -37,14 +36,14 @@ public class Main extends JavaPlugin {
 		Plugin = this;
 		Bukkit.getConsoleSender().sendMessage("§6[§eTrueEC4D§6] §fversion available: §a1.0");
 		Bukkit.getConsoleSender().sendMessage("§fDeveloped by " + authors);
-	    Bukkit.getConsoleSender().sendMessage("§fTrueEC4D has been §aEnabled§f!");
-	    createCustomConfig();
-	    PluginManager pm = Bukkit.getPluginManager();
-	    pm.registerEvents(new Event(), this);
-	    getCommand("trueec4d").setExecutor(new TrueEC4D());
-	    getCommand("wallet").setExecutor(new TrueWallet());
-	    getCommand("topupshop").setExecutor(new TopupShop());
-	    getCommand("refill").setExecutor(new TrueMoney());
+	        Bukkit.getConsoleSender().sendMessage("§fTrueEC4D has been §aEnabled§f!");
+	        createCustomConfig();
+	        PluginManager pm = Bukkit.getPluginManager();
+	        pm.registerEvents(new Event(), this);
+	        getCommand("trueec4d").setExecutor(new TrueEC4D());
+	        getCommand("wallet").setExecutor(new TrueWallet());
+	        getCommand("topupshop").setExecutor(new TopupShop());
+	        getCommand("refill").setExecutor(new TrueMoney()); 
 	}
 	
 	public static void main() {
@@ -63,28 +62,9 @@ public class Main extends JavaPlugin {
 	
 	@Override
 	public void onDisable() {
-		Bukkit.getConsoleSender().sendMessage("§6[§eTrueEC4D§6] §fversion available: §a1.0");
-		Bukkit.getConsoleSender().sendMessage("§fDeveloped by " + authors);
-	    Bukkit.getConsoleSender().sendMessage("§fTrueEC4D has been §cDisabled§f!");
-	}
-	
-	public static boolean isEnable() {
-		boolean allow = false;
-		InetAddress IP = null;
-		try {
-			IP = InetAddress.getLocalHost();
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-		} 
-		if (IP.getHostAddress().equals(IP)) {
-			allow = true;
-			Bukkit.getConsoleSender().sendMessage("§6[§eTrueEC4D§6]§7: §fIP correct!");
-		} else {
-			allow = false;
-			Bukkit.getConsoleSender().sendMessage("§6[§eTrueEC4D§6]§7: §fIP incorrect!, Shutdown Plugin");
-			Bukkit.getConsoleSender().sendMessage("§6[§eTrueEC4D§6]§7: §fPlease contain §c@SpringCraft Studio");
-		}
-		return allow;
+	     Bukkit.getConsoleSender().sendMessage("§6[§eTrueEC4D§6] §fversion available: §a1.0");
+             Bukkit.getConsoleSender().sendMessage("§fDeveloped by " + authors);
+	     Bukkit.getConsoleSender().sendMessage("§fTrueEC4D has been §cDisabled§f!");
 	}
 	
 	public String getMessage(String message) {
