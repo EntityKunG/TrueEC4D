@@ -43,7 +43,7 @@ public class WalletAPI {
         HttpsURLConnection conn = (HttpsURLConnection) new URL(APIURL.api_host + APIURL.api_endpoint_signin).openConnection();
         conn.setRequestMethod("POST");
         conn.setRequestProperty("Host", "mobile-api-gateway.truemoney.com");
-        conn.setRequestProperty("X-Requested-With", "Curl");
+        conn.setRequestProperty("X-Requested-With", "okhttp/3.8.0");
         conn.setRequestProperty("Content-Type", "application/json");
         conn.setDoOutput(true);
         OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
@@ -72,7 +72,7 @@ public class WalletAPI {
     }
     
     public static String GetTransaction(String token, String start, String end, int limit) throws IOException {
-        return WalletAPIRequest.get(APIURL.api_host + APIURL.api_endpoint_gettran + token + "/?startDate=" + start + "&endDate=" + end + "&limit=" + 50 + "&page=1&type=&action=");
+        return WalletAPIRequest.get(APIURL.api_host + APIURL.api_endpoint_gettran + token + "/?startDate=" + start + "&endDate=" + end + "&limit=" + limit + "&page=1&type=&action=");
     }
 
     public static String GetReport(String token, String id) throws IOException {
