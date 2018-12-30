@@ -1,0 +1,14 @@
+name: TrueEC4D
+main: com.truewallet.recovery.Main
+version: 1.0
+softdepend: [PlaceholderAPI]
+
+commands:
+   TrueEC4D:
+      description: Command for settings admin!
+   Wallet:
+      description: Topup with truewallet this command available for player only!
+   Topupshop:
+      description: Open inventory shop gui this command available for player only!
+   Refill:
+      description: Topup with truemoney this command available for player only!

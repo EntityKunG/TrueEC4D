@@ -1,0 +1,13 @@
+Transaction:
+   TrueWallet:
+       12345678901234:
+          Date: "29/12/2561 11:30:10"
+          Name: "FewKunGZ"
+          Amount: "50.00"
+   TrueMoney:
+       1234567891234:
+          Date: "30/12/2561 01:54:30"
+          Name: "FewKunGZ"
+          Amount: "50.00"     
+     
+   

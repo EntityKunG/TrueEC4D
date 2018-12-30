@@ -1,0 +1,28 @@
+TrueWallet:
+   help: "&4[&cTrueWallet&4]&7: &fPlease write transaction &e/wallet &8[&7Transaction&8]       &a- &8(&f081-1111111&8) &e[&fPlease write your name]"
+   havepoint: "&4[&cTrueWallet&4]&7: &fYou have &a{point} point"
+   error: "&4[&cTrueWallet&4]&7: &cSomethings is wrongly!"
+   contactadmin: "&4[&cTrueWallet&4]&7: &cPlease contact administrator."
+   number: "&4[&cTrueWallet&4]&7: &cPlease use numbers only."
+   fillnumber: "&4[&cTrueWallet&4]&7: &cThe reference code has 14 transaction-pin."
+   already: "&4[&cTrueWallet&4]&7: &cTransaction Id is already used. Please try again"
+   notfound: "&4[&cTrueWallet&4]&7: &cNot found Transaction this Id."
+   successfully: "&4[&cTrueWallet&4]&7: &aSuccessfully! &fYou have been topup with truewallet &e{point} &fpoint."
+  
+TrueMoney:
+   help: "&3[&bTrueMoney&3]&7: &fPlease write cashcard &e/refill &8[&7Cashcard&8]"   
+   havepoint: "&3[&bTrueMoney&3]&7: &fYou have &a{point} point"
+   error: "&3[&bTrueMoney&3]&7: &cSomethings is wrongly!"
+   contactadmin: "&3[&bTrueMoney&3]&7: &cPlease contact administrator."
+   already: "&3[&bTrueMoney&3]&7: &cCashcard is already used. Please try again."
+   number: "&3[&bTrueMoney&3]&7: &cPlease use numbers only."
+   fillnumber: "&3[&bTrueMoney&3]&7: &cThe reference code has 14 truemoney-pin."
+   successfully: "&3[&bTrueMoney&3]&7: &aSuccessfully! &fYou have been topup with truemoney &e{point} &fpoint."
+   
+ShopGUI:
+   error: "&2[&aShopGUI&2]&7: &cSomethings is wrongly!"
+   price: "&ePrice: {point} point"
+   canbuy: "&a* Click to buy *"
+   cantbuy: "&c* Not enough point to buy"
+   donthaveenoght: "&2[&aShopGUI&2]&7: &cYou don't have enough point to buy this!"
+   

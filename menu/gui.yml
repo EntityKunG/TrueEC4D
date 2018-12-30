@@ -1,0 +1,17 @@
+menu-name: '&6Shop GUI'
+menu-size: 9
+inventory:
+  '1':
+    display-name: '&bMusic &dCard'
+    price: 200
+    display-item-name: THIN_GLASS
+    display-item: thin_glass
+    display-item-data: 0
+    display-item-amount: 1
+    display-item-lore:
+    - ' '
+    - '&aThis is Music Card'
+    - '&eRandom &bSpecial Pictures &efrom &a51 Members'
+    execute-commands:
+    - say %player% has bought Music Card!
+    - give %player% thin_glass 1 0
