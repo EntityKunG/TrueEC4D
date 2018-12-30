@@ -11,9 +11,10 @@ import javax.net.ssl.HttpsURLConnection;
 public class WalletAPIRequest {
 
 	public static String get(String url) throws IOException {
-		HttpsURLConnection conn = (HttpsURLConnection) new URL(url).openConnection();
+	HttpsURLConnection conn = (HttpsURLConnection) new URL(url).openConnection();
         conn.setRequestMethod("GET");
         conn.setRequestProperty("Host", "mobile-api-gateway.truemoney.com");
+	conn.setRequestProperty("X-Requested-With", "okhttp/3.8.0");
         conn.setDoOutput(true);
         BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
         StringBuilder sb = new StringBuilder();
@@ -28,9 +29,10 @@ public class WalletAPIRequest {
 	}
 	
 	public static String post(String url) throws IOException {
-		HttpsURLConnection conn = (HttpsURLConnection) new URL(url).openConnection();
+	HttpsURLConnection conn = (HttpsURLConnection) new URL(url).openConnection();
         conn.setRequestMethod("POST");
         conn.setRequestProperty("Host", "mobile-api-gateway.truemoney.com");
+	conn.setRequestProperty("X-Requested-With", "okhttp/3.8.0");
         conn.setDoOutput(true);
         BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
         StringBuilder sb = new StringBuilder();
