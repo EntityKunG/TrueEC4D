@@ -9,4 +9,6 @@ Notice: *TrueMoney will take 14% as extra charge.*
 เป็นปลั๊กอินเติมเงินผ่านทรูมันนี่วอเล็ตที่ใช้งานอย่างง่ายดายและสะดวกสบาย
 เพิ่มเติม: *ทรูมันนี่จะหักค่าเติมเงิน 14%*
 
+**IMPORTANT! This plugin is licensed with [CC-BY-NC4.0](https://creativecommons.org/licenses/by-nc/4.0/legalcode)**
+
 **For more info contact: [EntityKunG](https://www.facebook.com/few.mvsk)**
