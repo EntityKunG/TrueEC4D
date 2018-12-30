@@ -72,7 +72,7 @@ public class WalletAPI {
     }
     
     public static String GetTransaction(String token, String start, String end, int limit) throws IOException {
-        return WalletAPIRequest.get(APIURL.api_host + APIURL.api_endpoint_gettran + token + "/?startDate=" + start + "&endDate=" + end + "&limit=" + 50 + "&page=1&type=&action=");
+        return WalletAPIRequest.get(APIURL.api_host + APIURL.api_endpoint_gettran + token + "/?startDate=" + start + "&endDate=" + end + "&limit=" + limit + "&page=1&type=&action=");
     }
 
     public static String GetReport(String token, String id) throws IOException {
