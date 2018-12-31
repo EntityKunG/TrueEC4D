@@ -35,8 +35,6 @@ public class TrueMoney implements CommandExecutor {
 					}
 				}
 				p.sendMessage(Main.getPlugin().getMessage(Main.getPlugin().getMessageConfig().getString("TrueMoney.havepoint").replace("{point}", String.valueOf(Economy.getPoint(p.getName())))));
-			} else if (args.length <= 1) {
-				p.sendMessage(Main.getPlugin().getMessage(Main.getPlugin().getMessageConfig().getString("TrueMoney.help")));
 			} else if (args.length == 1) {
 				if (Main.getPlugin().getConfig().getString("Email").equals("your@email.com")) {
 					p.sendMessage(Main.getPlugin().getMessage(Main.getPlugin().getMessageConfig().getString("TrueMoney.contactadmin")));
