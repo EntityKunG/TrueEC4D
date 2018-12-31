@@ -27,12 +27,12 @@ public class TrueMoney implements CommandExecutor {
 			if (args.length == 0) {
 				p.sendMessage(Main.getPlugin().getMessage(Main.getPlugin().getMessageConfig().getString("TrueMoney.help")));
 				if (!Main.getPlugin().getMessageConfig().contains("TrueMoney.havepoint")) {
-					Main.getPlugin().getMessageConfig().set("TrueMoney.havepoint", "&3[&bTrueMoney&3]&7: &fYou have &a{point} point");
-					try {
-						Main.getPlugin().getMessageConfig().save(new File(Main.getPlugin().getDataFolder(), "message.yml"));
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
+				    Main.getPlugin().getMessageConfig().set("TrueMoney.havepoint", "&3[&bTrueMoney&3]&7: &fYou have &a{point} point");
+				    try {
+				       Main.getPlugin().getMessageConfig().save(new File(Main.getPlugin().getDataFolder(), "message.yml"));
+				     } catch (IOException e) {
+				       e.printStackTrace();
+				     }
 				}
 				p.sendMessage(Main.getPlugin().getMessage(Main.getPlugin().getMessageConfig().getString("TrueMoney.havepoint").replace("{point}", String.valueOf(Economy.getPoint(p.getName())))));
 			} else if (args.length == 1) {
@@ -71,12 +71,13 @@ public class TrueMoney implements CommandExecutor {
 							        	data.set("Transaction.TrueMoney." + args[0] + ".Name", p.getName());
 							        	data.set("Transaction.TrueMoney." + args[0] + ".Amount", amount);
 						        		data.save(new File(Main.getPlugin().getDataFolder(), "/database/transaction.yml"));
-						        		Economy.AddPoint(p.getName(), (int)Double.parseDouble(amount));
+						        		Economy.AddPoint(p.getName(), Integer.parseInt(amount));
 						        		p.sendMessage(Main.getPlugin().getMessage(Main.getPlugin().getMessageConfig().getString("TrueMoney.successfully").replace("{point}", amount)));
 						        		Bukkit.getScheduler().cancelTask(TrueMoney.this.topup);
 									}
 								  } catch (IOException e) {
-									  e.printStackTrace();
+									  String message = Main.getPlugin().getMessage(Main.getPlugin().getMessageConfig().getString("TrueMoney.error"));
+									  p.sendMessage(message);
 								  }
 							}
 						  };
