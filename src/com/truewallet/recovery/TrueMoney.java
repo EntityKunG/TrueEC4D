@@ -39,8 +39,8 @@ public class TrueMoney implements CommandExecutor {
 				if (Main.getPlugin().getConfig().getString("Email").equals("your@email.com")) {
 					p.sendMessage(Main.getPlugin().getMessage(Main.getPlugin().getMessageConfig().getString("TrueMoney.contactadmin")));
 					if (p.isOp()) {
-						p.sendMessage("§6[§eTrueEC4D§6]§7: §cNot found email, Please setup and try again");
-						p.sendMessage("§6[§eTrueEC4D§6]§7: §cIf you finish you can /trueec4d reload!");
+						p.sendMessage("§6[§eTrueEC4D§6]§7: §cTrueMoney Account is not configurated");
+						p.sendMessage("§6[§eTrueEC4D§6]§7: §cPlease edit configurations in config.yml file, then /trueec4d reload!");
 					} 
 				} else {
 					if (Pattern.matches("[a-zA-Z]", args[0])) {
