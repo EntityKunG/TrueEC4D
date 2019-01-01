@@ -42,9 +42,11 @@ public class WalletAPI {
         }
         HttpsURLConnection conn = (HttpsURLConnection) new URL(APIURL.api_host + APIURL.api_endpoint_signin).openConnection();
         conn.setRequestMethod("POST");
-        conn.setRequestProperty("Host", "mobile-api-gateway.truemoney.com");
-        conn.setRequestProperty("X-Requested-With", "okhttp/3.8.0");
-        conn.setRequestProperty("Content-Type", "application/json");
+        conn.setRequestProperty("Accept-Encoding", "gzip, deflate");
+	conn.setRequestProperty("Connection", "close");
+	conn.setRequestProperty("Content-Type", "application/json");
+	conn.setRequestProperty("Host", "mobile-api-gateway.truemoney.com");
+	conn.setRequestProperty("User-Agent", "okhttp/3.8.0");
         conn.setDoOutput(true);
         OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
         wr.write(data.toString());
