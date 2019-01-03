@@ -11,23 +11,23 @@ import javax.net.ssl.HttpsURLConnection;
 public class WalletAPIRequest {
 
 	public static String get(String url) throws IOException {
-	HttpsURLConnection conn = (HttpsURLConnection) new URL(url).openConnection();
-        conn.setRequestMethod("GET");
-        conn.setRequestProperty("Accept-Encoding", "gzip, deflate");
-	conn.setRequestProperty("Connection", "close");
-	conn.setRequestProperty("Host", "mobile-api-gateway.truemoney.com");
-	conn.setRequestProperty("User-Agent", "okhttp/3.8.0");
-        conn.setDoOutput(true);
-        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
-        StringBuilder sb = new StringBuilder();
-        while (true) {
-            String line = in.readLine();
-            if (line == null) {
-            	in.close();
-                return sb.toString();
-            }
-            sb.append(line);
-        }
+	   HttpsURLConnection conn = (HttpsURLConnection) new URL(url).openConnection();
+           conn.setRequestMethod("GET");
+           conn.setRequestProperty("Accept-Encoding", "gzip, deflate");
+	   conn.setRequestProperty("Connection", "close");
+	   conn.setRequestProperty("Host", "mobile-api-gateway.truemoney.com");
+	   conn.setRequestProperty("User-Agent", "okhttp/3.8.0");
+           conn.setDoOutput(true);
+           BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
+           StringBuilder sb = new StringBuilder();
+           while (true) {
+              String line = in.readLine();
+              if (line == null) {
+                  in.close();
+                  return sb.toString();
+              }
+              sb.append(line);
+           }
 	}
 	
 	public static String post(String url) throws IOException {
